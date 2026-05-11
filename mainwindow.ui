@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>900</width><height>600</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>Student Grade Checker</string>
+  </property>
+
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+
+    <!-- Title -->
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="text"><string>Student Grade Checker</string></property>
+      <property name="alignment"><set>Qt::AlignCenter</set></property>
+     </widget>
+    </item>
+
+    <!-- Search row -->
+    <item>
+     <layout class="QHBoxLayout" name="searchLayout">
+      <item>
+       <widget class="QLineEdit" name="searchInput">
+        <property name="placeholderText"><string>Search by Student ID...</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="searchStudentBtn">
+        <property name="text"><string>Search</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="sortByGPABtn">
+        <property name="text"><string>Sort by GPA</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- Table — column headers defined as direct <column> children -->
+    <item>
+     <widget class="QTableWidget" name="studentsTable">
+      <property name="columnCount"><number>5</number></property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <column>
+       <property name="text"><string>ID</string></property>
+      </column>
+      <column>
+       <property name="text"><string>Name</string></property>
+      </column>
+      <column>
+       <property name="text"><string>Grades</string></property>
+      </column>
+      <column>
+       <property name="text"><string>GPA</string></property>
+      </column>
+      <column>
+       <property name="text"><string>Grade</string></property>
+      </column>
+     </widget>
+    </item>
+
+    <!-- Status label -->
+    <item>
+     <widget class="QLabel" name="statusLabel">
+      <property name="text"><string>Total Students: 0</string></property>
+     </widget>
+    </item>
+
+    <!-- Bottom buttons -->
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="addStudentBtn">
+        <property name="text"><string>Add Student</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="updateGradesBtn">
+        <property name="text"><string>Update Grades</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="removeStudentBtn">
+        <property name="text"><string>Remove Student</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="showTopStudentBtn">
+        <property name="text"><string>Top Student</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="displayAllBtn">
+        <property name="text"><string>Refresh</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+   </layout>
+  </widget>
+
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect><x>0</x><y>0</y><width>900</width><height>24</height></rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
