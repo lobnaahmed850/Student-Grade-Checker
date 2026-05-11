@@ -57,7 +57,6 @@ StudentGradeChecker/
 - **Show Top Student** - Display the student with the highest GPA in a popup
 - **Input Validation** - All dialogs validate input and show inline error messages
 - **Status Bar** - Shows total student count at all times
--
 - **Letter Grade** — Automatically assigns A/B/C/D/F based on GPA
 
 ---
